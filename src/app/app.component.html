@@ -1,12 +1,35 @@
 <mat-sidenav-container class="sidenav-container">
+  <!-- 👇 Sidenav on right -->
   <mat-sidenav #sidenav mode="over" position="end" class="sidenav">
-    <p>💬 Chat or menu content here</p>
-    <button mat-button (click)="sidenav.close()">🏠 Toggle Chat</button>
+    
+      <button mat-button (click)="sidenav.close()"  class="clear-button">Close</button>
+      <button (click)="clearMessages()" class="clear-button">🗑️ Clear Log</button>
+    
+    
+    <div class="chat-container">
+      <div class="messages" #scrollMe>
+        <div *ngFor="let msg of messages" [class]="msg.sender">
+          <b>{{ msg.sender }}:</b> {{ msg.text }}
+        </div>
+      </div>
+
+      <div class="chat-input">
+
+        <input
+          [(ngModel)]="userMessage"
+          (keyup.enter)="sendMessage()"
+          placeholder="Type your message..."
+          class="input-box"
+        />
+        <button (click)="sendMessage()" class="send-button">Send</button>
+      </div>
+    </div>
+    
   </mat-sidenav>
 
   <mat-toolbar color="primary">
     <span class="spacer"> </span>
-    <button mat-button (click)="toggleSidenav()"> 🏠Toggle Chat</button>
+    <button mat-button (click)="toggleSidenav()" class="send-button"> 💬Chat</button>
     
   </mat-toolbar>
 
