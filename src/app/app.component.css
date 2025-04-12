@@ -1,0 +1,15 @@
+.sidenav-container {
+    height: 100vh;
+  }
+  
+  .sidenav {
+    width: 300px;
+    padding: 1rem;
+  }
+  
+  .main-content {
+    padding: 1rem;
+  }
+  .spacer {
+    flex: 1 1 auto;
+  }
