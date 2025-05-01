@@ -4,7 +4,7 @@
   }
   
   .sidenav {
-    width: 400px;
+    width: 600px;
     padding: 1rem;
     display: flex;
     flex-direction: column;
@@ -59,7 +59,8 @@
     color: white;
     padding: 8px 12px;
     border-radius: 15px;
-    max-width: 70%;
+    max-width: 80%;
+    font-size: small;
   }
   .bot {
     align-self: flex-start;
@@ -67,8 +68,11 @@
       color: #333;
       padding: 8px 12px;
       border-radius: 15px;
-      max-width: 70%;
-    color: green;
+      max-width: 90%;
+      color: green;
+      font-size: small;
+      
+      white-space: pre-line;
   }
   .message-text {
     word-wrap: break-word;
